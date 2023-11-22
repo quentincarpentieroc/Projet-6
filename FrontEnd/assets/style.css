@@ -21,7 +21,6 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -50,13 +49,31 @@ table {
 body {
 	max-width: 1140px;
 	margin:auto;
-	font-family: 'Work Sans' ;
+	font-family: 'Work Sans';
 	font-size: 14px;
 }
 header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0
+}
+
+.edition{
+	height: 59px;
+	width: auto;
+	background-color: black;
+}
+
+.edition h3{
+	padding-top: 25px;
+	text-align: center;
+	color: white;
+}
+.edition i{
+	color:white;
+	position: relative;
+	left: 500px;
+	bottom: 15px;
 }
 section {
 	margin: 50px 0
@@ -75,24 +92,26 @@ h1 > span {
 	font-family: 'Work Sans';
 	font-size:10px;
 	letter-spacing: 0.1em;
-;
 }
 
 h2{
 	font-family: 'Syne';
 	font-weight: 700;
 	font-size: 30px;
-	color: #1D6154
+	color: #1D6154;
 }
 nav ul {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-
 }
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+}
+nav a{
+	text-decoration: none;
+	color: black;
 }
 
 li:hover {
@@ -125,6 +144,51 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+.modif{
+	position: relative;
+	left: 725px;
+	bottom: 50px;
+	border:none;
+	background-color: white;
+	font-family: 'Syne';
+	cursor: pointer;
+}
+
+.edition,
+.modif{
+	display: none;
+}
+
+#filtres{
+	text-align: center;
+}
+
+#filtres button{
+	border-radius: 20px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	background-color: white;
+	font-size: 15px;
+	font-family: 'Work Sans';
+	height: 35px;
+}
+
+#categorie-btn {
+    /* Styles par défaut */
+    background-color: transparent;
+    color: #1D6154;
+    border: 1px solid #1D6154;
+    font-weight: bold;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+#categorie-btn.active {
+    background-color: #1D6154;
+    color: white;
+}
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -132,6 +196,7 @@ li:hover {
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
 }
+
 
 .gallery img {
 	width: 100%;
@@ -185,4 +250,206 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em
 }
+/*Fenêtre modale galerie*/
 
+.modal{
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0000004D;
+}
+
+.hidden{
+	display: none;
+}
+
+.modal-wrap{
+	position: fixed;
+	left: 28%;
+	top: 7%;
+	width: 630px;
+	height: 668px;
+	background-color: white;
+}
+
+#close{
+	width: 24px;
+	height: 24px;
+	display: flex;
+	position: relative;
+	left: 595px;
+	cursor: pointer;
+}
+
+aside h3{
+	font-family: 'Work Sans';
+	font-size: 26px;
+	width: 173px;
+	position: relative;
+	left: 225px;
+	top: 75px;
+}
+
+.modal-Photo{
+	display: grid;
+	grid-template-columns: 90px 90px 90px 90px 90px;
+	position: relative;
+	top: 100px;
+	left: 93px;
+}
+
+.icone-poubelle{
+	position: relative;
+	left: 55px;
+	bottom: 95px;
+	cursor: pointer;
+	color: black;
+}
+
+.ligne{
+	width: 420px;
+	height: 0px;
+	border: 1px solid;
+	color: #B3B3B3;
+	position: relative;
+	top: 150px;
+	left: 100px;
+}
+
+#btnajout{
+	position: relative;
+	top: 175px;
+	left: 200px;
+	width: 237px;
+	height: 36px;
+	background-color:#1D6154;
+	border-radius: 30px;
+	border: none;
+	color:white;
+	font-family: 'Work Sans';
+	cursor: pointer;
+}
+
+/*Fenetre modal Ajout*/
+#btnretour{
+	padding-left: 25px;
+	position: relative;
+	bottom: 6px;
+}
+
+#close2{
+	position : relative;
+	left: 550px;
+	bottom: 6px;
+}
+
+.rectangle{
+	position: relative;
+	top: 95px;
+	left: 100px;
+	width: 420px;
+	height: 169px;
+	background-color: #E8F1F6;
+	border: none;
+}	
+
+.rectangle label{
+	position:absolute;
+	top: 90px;
+	left: 125px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px; 	
+	cursor: pointer;
+	background-color: #CBD6DC;
+	color:#306685;
+	border-radius: 50px;
+}
+
+.rectangle i{
+	font-size: 76px;
+	position: relative;
+	top: 45px;
+	left: 167px;
+	color:#CBD6DC;
+}
+
+.rectangle p{
+	font-family: 'Work Sans';
+	position: absolute;
+	top: 125px;
+	left: 160px;
+	font-family: 'Work Sans';
+	font-weight: 400;
+	font-size: 10px;
+}
+
+.imageAjouter{
+	display: flex;
+	justify-content: center;
+}
+
+.modal-name{
+	position: relative;
+	top: 145px;
+	left: 62px;
+}
+
+.modal-categorie{
+	position: relative;
+	top: 185px;
+	left: 35px;
+}
+
+.modal-name input{
+	width: 420px;
+	height: 51px;
+	box-shadow: 0px 4px 14px 0px #00000017;
+	border:none;
+}
+.modal-categorie select{
+	width: 420px;
+	height: 51px;
+	box-shadow: 0px 4px 14px 0px #00000017;
+	border:none;
+}
+
+.modal-categorie label {
+	position: relative;
+	bottom: 40px;
+	left: 68px;
+}
+
+.modal-name label{
+	position: relative;
+	bottom: 40px;
+	left: 40px;
+}
+
+.ligne2{
+	width: 420px;
+	height: 0px;
+	border: 1px solid;
+	color: #B3B3B3;
+	position: relative;
+	top: 226px;
+	left: 100px;
+}
+
+.valider{
+	width: 237px;
+	height: 36px;
+	border-radius: 30px;
+	border: none;
+	font-family: 'Syne';
+	font-weight: 700;
+	position: relative;
+	top: 260px;
+	left: 200px;
+	color: #FFFFFF;
+	background-color: #A7A7A7;
+}
